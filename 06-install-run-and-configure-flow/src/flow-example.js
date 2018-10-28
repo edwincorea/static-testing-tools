@@ -10,6 +10,7 @@ type User = {
     last: string,
   },
 }
+
 function getFullName(user: User): string {
   const {
     name: {first, middle, last},

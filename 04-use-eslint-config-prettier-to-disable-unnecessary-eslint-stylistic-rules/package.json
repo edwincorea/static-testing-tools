@@ -14,5 +14,32 @@
     "eslint": "^5.5.0",
     "eslint-config-prettier": "^3.0.1",
     "prettier": "^1.14.2"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2018
+    },
+    "extends": [
+      "eslint:recommended",
+      "eslint-config-prettier"
+    ],
+    "rules": {
+      "no-console": "off"
+    },
+    "env": {
+      "browser": true
+    }
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "bracketSpacing": false,
+    "jsxBracketSameLine": false,
+    "printWidth": 80,
+    "proseWrap": "always",
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false
   }
 }
