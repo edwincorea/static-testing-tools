@@ -28,12 +28,38 @@
     "parserOptions": {
       "ecmaVersion": 2018
     },
-    "extends": ["eslint:recommended", "eslint-config-prettier"],
+    "extends": [
+      "eslint:recommended",
+      "eslint-config-prettier"
+    ],
     "rules": {
       "no-console": "off"
     },
     "env": {
       "browser": true
+    }
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "bracketSpacing": false,
+    "jsxBracketSameLine": false,
+    "printWidth": 80,
+    "proseWrap": "always",
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false
+  },
+  "lint-staged": {
+    "linters": {
+      "*.js": [
+        "eslint"
+      ],
+      "*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)": [
+        "prettier --write",
+        "git add"
+      ]
     }
   }
 }
